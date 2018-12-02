@@ -1,0 +1,55 @@
+方便查找错误,之前版本可以正常运行的,新版本,不行,便于调试 bug
+
+思考:手动提交
+手动提交的优势:
+可以标记自己在这次提交中新增了什么,修复了什么.
+可以选择一个逻辑上出现变化,提交一次,变化不会大,容易查找错误
+自动提交保存的信息太杂乱,对比价值很小,修复 bug 的价值也不高.
+
+如何使用命令 git log 和 git diff 来查看文件的历史记录？
+ cd到 clone 的 repository 目录下,git log 就可以查看 commit 目录.
+ 选中 id, 使用 git diff id1 id2来比较
+
+ 使用版本控制，如何让你更有信心进行有可能会造成破坏的更改？
+ 敢做一些以前不敢动的模块,进行重构而不需要担心实现失败了无法返回已有的实现的功能
+
+ git 配置,设置颜色,默认编辑器
+git config --global core.editor "'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w"
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
+
+
+现在你已设置了工作空间，你想尝试使用 Git 来做些什么？
+用来管理我的代码
+dir 下:
+git clone 链接可以直接克隆代码
+git log 可以查看日志
+git status 查看最后提交后更改的文件
+新建则可以 git init
+
+
+git init 初始化一个文件目录作为 git 管理的目录
+然后使用 git add 命令添加文件进 git 管理的 staging area
+接着可以 git commit 一次性提交缓存区的文件
+
+git branch 名字 
+创建分支
+git checkout 名字
+切换到某个分支
+
+git show CommitID
+可以展示某一次提交 A和 A的父提交 (commit) 之前的差别
+
+如果合并有冲突可以用--abort 恢复合并前的状态
+git merge --abort，将文件恢复到你开始合并之前的状态
+
+git remote 查看远程仓库
+git remote add 远程仓库名(一般为 origin) 地址(ssh/https)
+
+git remote -v 显示更多信息
+
+github 的 pull request 就是在 GitHub 上进行 merge request 的意思.就是指合并
+
+在独立的 branch 中修改,一般是希望做一些测试行的工程,而不希望影响主节点上的代码.
+
+
